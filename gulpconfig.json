@@ -1,0 +1,62 @@
+{
+  "name": "Node - Boilerplate",
+  "author": "Tom Danvers",
+  "sync": {
+    "client": {
+        "proxy": "node-boilerplate",
+        "files": [
+            "./distribution/css/main.min.css",
+            "./distribution/js/main.js",
+            "./distribution/index.php"
+        ]
+    },
+    "browser": "google chrome",
+    "open": "local"
+  },
+  "src": {
+    "client": {
+        "styles": "./source/css/styles.styl",
+        "scripts": "./source/js/main.js",
+        "lint": "client/source/js/*.js",
+        "watch": {
+            "styles": "./source/**/*.{css,styl}",
+            "scripts": "./source/**/*.js",
+            "lint": "./source/**/*.js"
+        }
+    },
+    "server": {
+        "scripts": "./source/js/main.js",
+        "lint": "server/source/js/*.js",
+        "watch": {
+            "scripts":"./source/**/*.js"
+        }
+    },
+    "shared": {
+        "watch": {
+            "scripts": "shared/source/**/*.js"
+        }
+    }
+  },
+  "dest": {
+    "client": {
+        "paths": {
+            "css": "./distribution/css",
+            "js": "./distribution/js"
+        },
+        "names": {
+            "css": "main.min.css",
+            "jsmin": "main.min.js",
+            "js": "main.js"
+        }
+    },
+    "server": {
+        "paths": {
+            "js": "./distribution"
+        },
+        "names": {
+            "jsmin": "server.min.js",
+            "js": "server.js"
+        }
+    }
+  }
+}
