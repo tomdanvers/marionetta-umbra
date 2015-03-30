@@ -1,9 +1,9 @@
 {
-  "name": "Node - Boilerplate",
+  "name": "Marionetta Umbra",
   "author": "Tom Danvers",
   "sync": {
     "client": {
-        "proxy": "node-boilerplate",
+        "proxy": "marionetta-umbra",
         "files": [
             "./distribution/css/main.min.css",
             "./distribution/js/main.js",

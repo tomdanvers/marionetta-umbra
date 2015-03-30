@@ -33,7 +33,7 @@ $version_number = '0.0.1';
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		
-		<title>FE - Boilerplate</title>
+		<title>Marionetta Umbra</title>
 		
 		<meta name="description" content="">
 
