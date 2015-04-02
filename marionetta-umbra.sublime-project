@@ -1,0 +1,21 @@
+{
+	"folders":
+	[
+		{
+			"path":"."
+		},
+		{
+			"path":"assets"
+		},
+		{
+			"path":"shared"
+		},
+		{
+			"path": "server",
+			"folder_exclude_patterns": ["distribution"]
+		},
+		{
+			"path": "client"
+		}
+	]
+}

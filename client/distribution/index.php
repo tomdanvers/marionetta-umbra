@@ -19,7 +19,7 @@ if($host === 'HOST-NAME'){
 }
 
 /* Misc Vars */
-$google_api_key = 'AIzaSyBL8bygc0XJqS3IXT9QI5_pfBTD-YAsrQo';
+$google_api_key = '';
 $version_number = '0.0.1';
 
 ?>
@@ -53,9 +53,8 @@ $version_number = '0.0.1';
 		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
 
-		<div data-region="container" class="container">
-			<div data-region="app"></div>
-		</div>
+		<div class="screen" id="screen"></div>
+		<div class="input" id="input"></div>
 		
 		<script>
 			var script = document.createElement('script');
