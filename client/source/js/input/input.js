@@ -1,3 +1,6 @@
+
+var PuppetLimb = require('./puppet/puppet-arm');
+
 var template = require('../../templates/input.hbs');
 
 module.exports = function(elId) {
@@ -17,89 +20,97 @@ module.exports = function(elId) {
 	canvas.height = height;
 	el.appendChild(canvas);
 
+	// var touchIds = {};
+
 	canvas.addEventListener('touchstart', function(event) {
+
+		event.preventDefault();
 
 		var touch = event.changedTouches[0];
 
-		console.log('start', touch.identifier);
-		
-		if (touch.identifier === 0) {
+		var nearestLimb = getNearestLimb(touch.clientX, touch.clientY);
 
-			if (touch.clientX < width*.5) {
-				armLeft.setPointer(pointers[0]);
-				armRight.setPointer(pointers[1]);
-			} else {
-				armLeft.setPointer(pointers[1]);
-				armRight.setPointer(pointers[0]);
-			}
-			
-		}
-		
+		nearestLimb.startTouch(touch.identifier);
 
 	});
 
 	canvas.addEventListener('touchmove', function(event) {
 
-		var touch;
-		for (var i = 0; i < event.changedTouches.length; i++) {
-			touch = event.changedTouches[i];
-			if (touch.identifier < 2) {
-				pointers[touch.identifier].x = touch.clientX;
-				pointers[touch.identifier].y = touch.clientY;
+		event.preventDefault();
+
+		var touches = event.changedTouches;
+
+		var limb, touch;
+		for (var i = 0; i < limbs.length; i++) {
+			limb = limbs[i];
+			
+			for (var j = 0; j < touches.length; j++) {
+				touch = touches[j];
+
+				if (limb.getTouchId() === touch.identifier) {
+					limb.pointerX = touch.clientX;
+					limb.pointerY = touch.clientY;
+				}
 			}
-		}
+
+		};
+		
+	});
+
+	canvas.addEventListener('touchend', function(event) {
 
 		event.preventDefault();
+
+		var limb;
+		for (var i = 0; i < limbs.length; i++) {
+			limb = limbs[i];
+		
+			if (limb.getTouchId() === event.changedTouches[0].identifier) {
+				
+				limb.stopTouch();
+
+				// TODO Tween to rest
+			}
+		}
 		
 	});
 
 	var ctx = canvas.getContext('2d');
 
-	var pointers = [
-		{
-			x: 0,
-			y: 0
-		},
-		{
-			x: 0,
-			y: 0
-		}
-	];
-
-	var armLeft = new Arm('left', width*.3, height*.5, pointers[0]);
-	var armRight = new Arm('right', width*.7, height*.5, pointers[1]);
-
-	var arms = [];
-	arms.push(armLeft);
-	arms.push(armRight);
-
-	console.log(arms);
+	var limbs = [];
+	limbs.push(new PuppetLimb('arm-left', width*.3, height*.5));
+	limbs.push(new PuppetLimb('arm-right', width*.7, height*.5));
 
 	requestAnimationFrame(update);
 
 	function update() {
 
-		armLeft.update();
-		armRight.update();
+		var i;
+
+		// Update
+
+		for(i = 0; i < limbs.length; i ++) {
+			limbs[i].update();
+		}
+
+		// Render
 
 		ctx.fillStyle = 'white';
 		ctx.fillRect(0,0,width,height);
 
-		var arm;
+		var limb;
 		var segment;
-		for(var i = 0; i < arms.length; i ++) {
+		for(i = 0; i < limbs.length; i ++) {
 
-			arm = arms[i];
-			// console.log(i, arm.id, arm.x, arm.y)
+			limb = limbs[i];
 
 			ctx.beginPath();
-			for(var j = 0; j < arm.segmentCount; j ++) {
-				segment = arm.segments[j];
-
+			for(var j = 0; j < limb.segmentCount; j ++) {
+				segment = limb.segments[j];
 				if (j === 0) {
-					ctx.moveTo(arm.x + segment.x, arm.y + segment.y);
+					ctx.moveTo(limb.x + segment.x, limb.y + segment.y);
 				} else {
-					ctx.lineTo(arm.x + segment.x, arm.y + segment.y);
+					ctx.lineTo(limb.x + segment.x, limb.y + segment.y);
 				}
 			
 			}
@@ -110,81 +121,26 @@ module.exports = function(elId) {
 		requestAnimationFrame(update);
 	}
 
-	function Arm(id, x, y, pointer) {
+	function getNearestLimb(x, y) {
 
-		console.log('Arm(',id, x, y,')');
+		var limb, diffX, diffY, distance, nearest;
+		var shortestDistance = Number.MAX_VALUE;
 
-		var segmentDefinitions = [70, 70, 70, 20];
-		var segmentCount = segmentDefinitions.length;
-		var segments = [];
-
-		var pointer = pointer;
-		
-		for (var i = 0; i < segmentCount; i++) {
-			segments.push(new Segment(i, segmentDefinitions[i]));
-		}
-
-		function update() {
-
-			var seg1 = segments[segmentCount - 1];
-			seg1.x += (pointer.x - seg1.x - x) * 0.075;
-			seg1.y += (pointer.y - seg1.y - y)  * 0.075;
+		for( var i=0; i < limbs.length; i ++) {
+			limb = limbs[i];
 			
-			var i = segmentCount - 1;
-			while ( --i ) {
+			diffX = x - limb.getExtremity().x;
+			diffY = y - limb.getExtremity().y;
+			distance = Math.sqrt(diffX*diffX + diffY*diffY);
 
-				var seg0 = segments[i];
-				var seg1 = segments[i + 1];
-				var a = Math.atan2(seg0.y - seg1.y, seg0.x - seg1.x);
-				seg0.x = seg1.x + Math.cos(a) * seg1.length;
-				seg0.y = seg1.y + Math.sin(a) * seg1.length;
-
+			if (!nearest || distance < shortestDistance) {
+				nearest = limb;
+				shortestDistance = distance;
 			}
-
-			var i = 0, seg0, seg1;
-			while ( seg0 = segments[i++]) {
-
-				if (i > 1) {
-					var seg1 = segments[i - 2];
-					var a = seg0.a = Math.atan2(seg0.y - seg1.y, seg0.x - seg1.x);
-					seg0.x = seg1.x + Math.cos(a) * seg0.length;
-					seg0.y = seg1.y + Math.sin(a) * seg0.length;
-				}
-
-			}
-
-		}	
-
-		function setPointer(value) {
-			
-			if (pointer) {
-				value.x = pointer.x;
-				value.y = pointer.y;
-			}
-
-			pointer = value;
 
 		}
 
-		return {
-			id: id,
-			x: x,
-			y: y,
-			segmentCount: segmentCount,
-			segments: segments,
-			update: update,
-			setPointer: setPointer
-		};
-
-	}
-
-	function Segment(index, length) {
-		
-		return {
-			x: 0,
-			y: 0,
-			length: length
-		}
+		return nearest;
 
 	}
 
