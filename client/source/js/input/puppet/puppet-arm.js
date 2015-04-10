@@ -1,10 +1,13 @@
 var TWEEN = require('tween.js');
 
-module.exports = function(id, x, y) {
+module.exports = function(id, x, y, offsetX, offsetY) {
 
 	console.log('PuppetArm(',id, x, y,')');
+
+	offsetX = offsetX === undefined ? 0 : offsetX;
+	offsetY = offsetY === undefined ? 0 : offsetY;
 	
-	var segmentDefinitions = [70, 70, 70, 20];
+	var segmentDefinitions = [50, 50, 50, 15];
 	var segmentCount = segmentDefinitions.length;
 	var segments = [];
 
@@ -14,7 +17,7 @@ module.exports = function(id, x, y) {
 	var isTweening = false;
 
 	var velX = 0;
-	var pointerXOld= 0;
+	var pointerXOld = 0;
 
 	var velY = 0;
 	var pointerYOld = 0;
@@ -27,6 +30,8 @@ module.exports = function(id, x, y) {
 		y: y,
 		pointerX: x,
 		pointerY: y + 200,
+		offsetX: offsetX,
+		offsetY: offsetY,
 		segmentCount: segmentCount,
 		segments: segments,
 		update: update,

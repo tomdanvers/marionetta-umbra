@@ -12,8 +12,8 @@ module.exports = function(elId) {
 
 	console.log('Input(', elId, el, ')');
 
-	var width = 300;
-	var height = 500;
+	var width = window.innerWidth;
+	var height = window.innerHeight;
 
 	var canvas = document.createElement('canvas');
 	canvas.width = width;
@@ -48,8 +48,8 @@ module.exports = function(elId) {
 				touch = touches[j];
 
 				if (limb.getTouchId() === touch.identifier) {
-					limb.pointerX = touch.clientX;
-					limb.pointerY = touch.clientY;
+					limb.pointerX = touch.clientX + limb.offsetX;
+					limb.pointerY = touch.clientY + limb.offsetY;
 				}
 			}
 
@@ -68,8 +68,6 @@ module.exports = function(elId) {
 			if (limb.getTouchId() === event.changedTouches[0].identifier) {
 				
 				limb.stopTouch();
-
-				// TODO Tween to rest
 			}
 		}
 		
@@ -78,8 +76,8 @@ module.exports = function(elId) {
 	var ctx = canvas.getContext('2d');
 
 	var limbs = [];
-	limbs.push(new PuppetLimb('arm-left', width*.3, height*.5));
-	limbs.push(new PuppetLimb('arm-right', width*.7, height*.5));
+	limbs.push(new PuppetLimb('arm-left', width*.4, height*.5, 15, -65));
+	limbs.push(new PuppetLimb('arm-right', width*.6, height*.5, -15, -65));
 
 	requestAnimationFrame(update);
 
@@ -93,10 +91,15 @@ module.exports = function(elId) {
 			limbs[i].update();
 		}
 
-		// Render
+		// Render - Background
 
 		ctx.fillStyle = 'white';
 		ctx.fillRect(0,0,width,height);
+
+		// Render - Limbs
+
+		ctx.lineWidth = 5;
+		ctx.lineCap = ctx.lineJoin = 'round';
 
 		var limb;
 		var segment;
@@ -117,6 +120,15 @@ module.exports = function(elId) {
 			ctx.stroke(); 
 
 		}
+
+		// Render - Torso
+
+		ctx.beginPath();
+		ctx.moveTo(limbs[0].x, limbs[0].y);
+		ctx.lineTo(limbs[1].x, limbs[1].y);
+		ctx.lineTo(width*.5, limbs[1].y + 60);
+		ctx.lineTo(limbs[0].x, limbs[0].y);
+		ctx.stroke(); 
 
 		requestAnimationFrame(update);
 	}
