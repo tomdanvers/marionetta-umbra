@@ -1,7 +1,7 @@
 {
-  "name": "node-boilerplate-client",
+  "name": "marionetta-umbra",
   "version": "0.0.0",
-  "description": "",
+  "description": "Socket.io shadow puppetry",
   "main": "gulpfile.js",
   "browserify": {
     "transform": [
@@ -9,44 +9,37 @@
     ]
   },
   "devDependencies": {
-    "backbone": "^1.1.2",
-    "backbone.marionette": "^2.2.2",
-    "browser-sync": "^1.8.0",
-    "browserify": "^7.0.2",
-    "connect-history-api-fallback": "0.0.5",
-    "event-stream": "^3.1.7",
+    "browser-sync": "^2.6.4",
+    "browserify": "^9.0.8",
     "gulp": "^3.8.10",
-    "gulp-concat": "~2.2.0",
+    "gulp-concat": "~2.5.2",
     "gulp-connect": "^2.2.0",
-    "gulp-crash-sound": "0.0.1",
-    "gulp-csso": "~0.2.9",
-    "gulp-jshint": "~1.6.1",
+    "gulp-csso": "~1.0.0",
+    "gulp-jshint": "~1.10.0",
     "gulp-livereload": "^3.0.2",
     "gulp-minify-css": "^1.0.0",
     "gulp-open": "^0.3.1",
     "gulp-rename": "^1.2.0",
     "gulp-requirejs": "~0.1.3",
     "gulp-streamify": "0.0.5",
-    "gulp-strip-debug": "~0.3.0",
+    "gulp-strip-debug": "~1.0.2",
     "gulp-stylus": "^2.0.1",
-    "gulp-template-compile": "~0.2.0",
-    "gulp-uglify": "~0.3.0",
-    "gulp-watch": "~0.6.5",
-    "handlebars": "^2.0.0",
+    "gulp-template-compile": "~1.0.0",
+    "gulp-uglify": "~1.2.0",
+    "gulp-watch": "~4.2.4",
+    "handlebars": "^3.0.2",
     "hbsfy": "^2.2.1",
     "jquery": "~2.1.1",
     "nib": "^1.1.0",
-    "node-underscorify": "0.0.11",
     "require-dir": "^0.3.0",
     "socket.io-client": "^1.3.5",
     "tween.js": "^0.14.0",
-    "underscore": "~1.6.0",
     "vinyl-source-stream": "^1.0.0",
-    "watchify": "^2.2.1"
+    "watchify": "^3.1.2"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/tomdanvers/marionetta-umbra"
   },
   "author": "Tom Danvers"
 }

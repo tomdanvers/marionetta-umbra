@@ -20,8 +20,6 @@ module.exports = function(elId) {
 	canvas.height = height;
 	el.appendChild(canvas);
 
-	// var touchIds = {};
-
 	canvas.addEventListener('touchstart', function(event) {
 
 		event.preventDefault();
