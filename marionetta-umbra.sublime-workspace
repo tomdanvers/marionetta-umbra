@@ -4,6 +4,114 @@
 		"selected_items":
 		[
 			[
+				"of",
+				"offsetX"
+			],
+			[
+				"off",
+				"offsetX"
+			],
+			[
+				"di",
+				"diffY"
+			],
+			[
+				"tar",
+				"targetX"
+			],
+			[
+				"tween",
+				"tweenValues"
+			],
+			[
+				"poi",
+				"pointerX"
+			],
+			[
+				"twee",
+				"tweenValues"
+			],
+			[
+				"Tween",
+				"TWEEN"
+			],
+			[
+				"pointe",
+				"pointerXOld"
+			],
+			[
+				"point",
+				"pointerXOld"
+			],
+			[
+				"mom",
+				"momentumX"
+			],
+			[
+				"poin",
+				"pointerX"
+			],
+			[
+				"to",
+				"touches"
+			],
+			[
+				"tou",
+				"touchIds"
+			],
+			[
+				"po",
+				"pointerX"
+			],
+			[
+				"cli",
+				"clientX"
+			],
+			[
+				"new",
+				"newTouchIds"
+			],
+			[
+				"touch",
+				"touchIds"
+			],
+			[
+				"near",
+				"nearestLimb"
+			],
+			[
+				"se",
+				"segmentCount"
+			],
+			[
+				"get",
+				"getExtremity"
+			],
+			[
+				"lim",
+				"limbs"
+			],
+			[
+				"arm",
+				"armLeft"
+			],
+			[
+				"ar",
+				"arms"
+			],
+			[
+				"req",
+				"requestAnimationFrame"
+			],
+			[
+				"sge",
+				"segmentDefinitions"
+			],
+			[
+				"tem",
+				"template"
+			],
+			[
 				"share",
 				"sharePath"
 			],
@@ -40,10 +148,6 @@
 				"localeId"
 			],
 			[
-				"ar",
-				"artworkEmotionsMap"
-			],
-			[
 				"user",
 				"userEmotion"
 			],
@@ -72,10 +176,6 @@
 				"updateScroll"
 			],
 			[
-				"se",
-				"setItemByIndex"
-			],
-			[
 				"func",
 				"function"
 			],
@@ -86,10 +186,6 @@
 			[
 				"cal",
 				"callbackDone"
-			],
-			[
-				"new",
-				"newpostReq"
 			],
 			[
 				"re",
@@ -158,10 +254,6 @@
 			[
 				"wi",
 				"width"
-			],
-			[
-				"tem",
-				"templateSource"
 			],
 			[
 				"form",
@@ -236,10 +328,6 @@
 				"stateController"
 			],
 			[
-				"of",
-				"offsetY"
-			],
-			[
 				"va",
 				"value"
 			],
@@ -254,10 +342,6 @@
 			[
 				"ce",
 				"centreX"
-			],
-			[
-				"get",
-				"getContext"
 			],
 			[
 				"can",
@@ -430,140 +514,49 @@
 			[
 				"opt",
 				"optionsMap"
-			],
-			[
-				"to",
-				"toggles"
-			],
-			[
-				"ex",
-				"expanderMap"
-			],
-			[
-				"exp",
-				"expanderMap"
-			],
-			[
-				"exa",
-				"expanded"
-			],
-			[
-				"list-exp",
-				"list-expander-current"
-			],
-			[
-				"list-e",
-				"list-expander-toggle"
-			],
-			[
-				"tr",
-				"transform"
-			],
-			[
-				"fun",
-				"function"
-			],
-			[
-				"na",
-				"navigation"
-			],
-			[
-				"b",
-				"bottom"
-			],
-			[
-				"head",
-				"header-nav-bar"
-			],
-			[
-				"border",
-				"border-bottom"
-			],
-			[
-				"hea",
-				"header-nav"
-			],
-			[
-				"parse",
-				"parseInt"
-			],
-			[
-				"emot",
-				"emotionsByCount"
-			],
-			[
-				"getEmo",
-				"getEmotionsByOrder"
-			],
-			[
-				"emotionsBy",
-				"emotionsByCount"
-			],
-			[
-				"data",
-				"dataString"
-			],
-			[
-				"quer",
-				"queryString"
-			],
-			[
-				"reu",
-				"return"
-			],
-			[
-				"typ",
-				"type"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "server/source/js/main.js",
-			"settings":
-			{
-				"buffer_size": 924,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "gulpconfig.json",
-			"settings":
-			{
-				"buffer_size": 1456,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "client/source/js/main.js",
 			"settings":
 			{
-				"buffer_size": 522,
+				"buffer_size": 776,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "server/gulp-tasks/scripts-dev.js",
+			"file": "client/source/js/utils/ik.js",
 			"settings":
 			{
-				"buffer_size": 585,
+				"buffer_size": 3826,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "shared/source/js/constants/socket-screen-events.js",
+			"file": "client/source/templates/input.hbs",
 			"settings":
 			{
-				"buffer_size": 124,
+				"buffer_size": 11,
+				"line_ending": "Unix",
+				"name": "<div></div>"
+			}
+		},
+		{
+			"file": "client/source/js/input/input.js",
+			"settings":
+			{
+				"buffer_size": 3056,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/distribution/index.php",
+			"file": "client/source/js/input/puppet/puppet-arm.js",
 			"settings":
 			{
-				"buffer_size": 2427,
+				"buffer_size": 3099,
 				"line_ending": "Unix"
 			}
 		}
@@ -609,20 +602,20 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/tomdanvers/Documents/_workspace/marionetta-umbra",
-		"/Users/tomdanvers/Documents/_workspace/marionetta-umbra/assets",
-		"/Users/tomdanvers/Documents/_workspace/marionetta-umbra/client/distribution/js",
-		"/Users/tomdanvers/Documents/_workspace/marionetta-umbra/client/source/js",
-		"/Users/tomdanvers/Documents/_workspace/marionetta-umbra/server",
-		"/Users/tomdanvers/Documents/_workspace/marionetta-umbra/server/distribution",
-		"/Users/tomdanvers/Documents/_workspace/marionetta-umbra/server/source/js",
-		"/Users/tomdanvers/Documents/_workspace/marionetta-umbra/shared",
-		"/Users/tomdanvers/Documents/_workspace/marionetta-umbra/shared/source",
-		"/Users/tomdanvers/Documents/_workspace/marionetta-umbra/shared/source/js",
-		"/Users/tomdanvers/Documents/_workspace/marionetta-umbra/shared/source/js/constants"
 	],
 	"file_history":
 	[
+		"/Users/tomdanvers/Documents/Personal/marionetta-umbra/client/source/js/input/puppet/puppet-arm.js",
+		"/Users/tomdanvers/Documents/Personal/marionetta-umbra/client/source/js/input/marionette/marionette-arm.js",
+		"/Users/tomdanvers/Documents/Personal/marionetta-umbra/client/source/js/screen/screen.js",
+		"/Users/tomdanvers/Documents/Personal/marionetta-umbra/client/source/templates/screen.hbs",
+		"/Users/tomdanvers/Documents/Personal/marionetta-umbra/client/distribution/index.php",
+		"/Users/tomdanvers/Documents/Personal/marionetta-umbra/client/source/js/input/input.js",
+		"/Users/tomdanvers/Documents/Personal/marionetta-umbra/gulpconfig.json",
+		"/Users/tomdanvers/Documents/Personal/marionetta-umbra/server/gulp-tasks/scripts-dev.js",
+		"/Users/tomdanvers/Documents/Personal/marionetta-umbra/shared/source/js/constants/socket-screen-events.js",
+		"/Users/tomdanvers/Documents/Personal/marionetta-umbra/marionetta-umbra.sublime-project",
+		"/Users/tomdanvers/Documents/Personal/marionetta-umbra/server/source/js/main.js",
 		"/Users/tomdanvers/Documents/_workspace/marionetta-umbra/README.md",
 		"/Users/tomdanvers/Documents/_workspace/marionetta-umbra/gulpconfig.json",
 		"/Users/tomdanvers/Documents/_workspace/_node_boilerplate/client/node_modules/gulp/node_modules/chalk/node_modules/.bin/supports-color",
@@ -739,18 +732,7 @@
 		"/Users/tomdanvers/Documents/_workspace/art-of-feeling/tasks/scripts-dist.js",
 		"/Users/tomdanvers/Documents/_workspace/art-of-feeling/node_modules/gulp-uglify/node_modules/uglify-js/node_modules/source-map/build/suffix-utils.jsm",
 		"/Users/tomdanvers/Documents/_workspace/art-of-feeling/source-microsite/js/controller/equal-heights-controller.js",
-		"/Users/tomdanvers/Documents/_workspace/art-of-feeling/source-microsite/css/layout.styl",
-		"/Users/tomdanvers/Documents/_workspace/art-of-feeling/node_modules/gulp/node_modules/gulp-util/lib/isNull.js",
-		"/Users/tomdanvers/Documents/_workspace/art-of-feeling/node_modules/browserify/test/constants.js",
-		"/Users/tomdanvers/Documents/_workspace/art-of-feeling/node_modules/browser-sync/lib/config.js",
-		"/Users/tomdanvers/Documents/_workspace/art-of-feeling/gulpfile.js",
-		"/Users/tomdanvers/Documents/_workspace/art-of-feeling/tasks/scripts-lint.js",
-		"/Users/tomdanvers/Documents/_workspace/art-of-feeling/tasks/scripts-node.js",
-		"/Users/tomdanvers/Documents/_workspace/art-of-feeling/source-microsite/js/share/share-linkedin.js",
-		"/Users/tomdanvers/Documents/_workspace/art-of-feeling/node_modules/browser-sync/lib/cli/cli-options.js",
-		"/Users/tomdanvers/Documents/_workspace/art-of-feeling/distribution-microsite/emotion.php",
-		"/Users/tomdanvers/Documents/_workspace/art-of-feeling/source-shared/js/controller/copy-controller.js",
-		"/Users/tomdanvers/Documents/_workspace/art-of-feeling/distribution-microsite/img/share-linkedin.svg"
+		"/Users/tomdanvers/Documents/_workspace/art-of-feeling/source-microsite/css/layout.styl"
 	],
 	"find":
 	{
@@ -771,6 +753,19 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"momentum",
+			"limb",
+			"event",
+			"PuppetArm",
+			"arm",
+			"arms",
+			"pointers",
+			"pointer.x",
+			"MarionetteArm",
+			"100",
+			"i",
+			"segments[i]",
+			"this.armSegments",
 			"writeHe",
 			".watch",
 			"node",
@@ -885,20 +880,7 @@
 			"l-content__right",
 			"l-content__left",
 			"listExpanerController",
-			"list-expander-options",
-			"options",
-			"content",
-			"mousedown",
-			"mouseup",
-			"click",
-			"mousedown",
-			"mouseup",
-			"item",
-			"list-expander-item",
-			"2",
-			"top",
-			"red",
-			"white"
+			"list-expander-options"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -924,19 +906,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "server/source/js/main.js",
+					"file": "client/source/js/main.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 924,
+						"buffer_size": 776,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								125,
-								125
+								776,
+								776
 							]
 						],
 						"settings":
@@ -952,32 +934,32 @@
 				},
 				{
 					"buffer": 1,
-					"file": "gulpconfig.json",
+					"file": "client/source/js/utils/ik.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1456,
+						"buffer_size": 3826,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1335,
-								1335
+								885,
+								885
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"auto_name": "",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 157.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -988,24 +970,25 @@
 			[
 				{
 					"buffer": 2,
-					"file": "client/source/js/main.js",
+					"file": "client/source/templates/input.hbs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 522,
+						"buffer_size": 11,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								522,
-								522
+								11,
+								11
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"auto_name": "<div></div>",
+							"syntax": "Packages/Handlebars/Handlebars.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1016,19 +999,19 @@
 				},
 				{
 					"buffer": 3,
-					"file": "server/gulp-tasks/scripts-dev.js",
+					"file": "client/source/js/input/input.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 585,
+						"buffer_size": 3056,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								478,
-								500
+								2502,
+								2502
 							]
 						],
 						"settings":
@@ -1036,7 +1019,7 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 935.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -1044,59 +1027,31 @@
 				},
 				{
 					"buffer": 4,
-					"file": "shared/source/js/constants/socket-screen-events.js",
+					"file": "client/source/js/input/puppet/puppet-arm.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 124,
+						"buffer_size": 3099,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								124,
-								124
+								272,
+								272
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "client/distribution/index.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2427,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								422,
-								422
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 20.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -1157,6 +1112,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"inpu",
+				"client/source/js/input/input.js"
+			],
+			[
+				"scree",
+				"client/source/js/screen/screen.js"
+			],
 			[
 				"gu",
 				"gulpconfig.json"
@@ -1660,14 +1623,6 @@
 			[
 				"colour",
 				"source-shared/utils/colour-utils.js"
-			],
-			[
-				"mode",
-				"source-shared/model/model.js"
-			],
-			[
-				"brush",
-				"source-shared/utils/brush-generator.js"
 			]
 		],
 		"width": 0.0
