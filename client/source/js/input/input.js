@@ -18,7 +18,12 @@ module.exports = function(elId) {
 	var canvas = document.createElement('canvas');
 	canvas.width = width;
 	canvas.height = height;
-	el.appendChild(canvas);
+	
+	var marionetteSelect = el.childNodes[0];
+	var marionetteRender = el.childNodes[2];
+	console.log(marionetteSelect)
+	console.log(marionetteRender)
+	marionetteRender.appendChild(canvas);
 
 	canvas.addEventListener('touchstart', function(event) {
 

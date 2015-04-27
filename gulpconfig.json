@@ -20,7 +20,7 @@
         "lint": "client/source/js/*.js",
         "watch": {
             "styles": "./source/**/*.{css,styl}",
-            "scripts": "./source/**/*.js",
+            "scripts": "./source/**/*.{js,hbs}",
             "lint": "./source/**/*.js"
         }
     },
